@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     /* Placeholder for the main background texture */
-    background-image: url('images/bg-texture.png'); /* REPLACE with your actual background image path */
+    background-image: url('img/1.png'); /* REPLACE with your actual background image path */
     background-size: cover; /* or '100% 100%' or 'repeat' depending on your image */
     background-attachment: fixed; /* Keeps background fixed when scrolling */
 }
@@ -23,7 +23,7 @@ body {
     align-items: center;
     padding: 10px 50px;
     /* Placeholder for navigation bar texture */
-    background-image: url('images/nav-bg.png'); /* REPLACE with your actual nav background image path */
+    background-image: url('img/3.png'); /* REPLACE with your actual nav background image path */
     background-size: cover;
     background-position: center;
     position: sticky; /* Makes header stick to the top */
