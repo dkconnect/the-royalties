@@ -1,10 +1,10 @@
-// Initialize the Leaflet map with locked settings
+// Initialize the Leaflet map with locked settings and zoom controls
 const map = L.map('map', {
     center: [20, 0], // Center on the world
-    zoom: 2, // Fixed zoom level
+    zoom: 2, // Fixed initial zoom level
     dragging: false, // Disable dragging/panning
-    zoomControl: false, // Remove zoom controls
-    scrollWheelZoom: false, // Disable zoom with mouse wheel
+    zoomControl: true, // Enable zoom controls (+/- buttons)
+    scrollWheelZoom: false, // Optional: Set to true if you want mouse wheel zoom
     doubleClickZoom: false, // Disable zoom on double-click
     boxZoom: false, // Disable zoom by dragging a box
     tap: false, // Disable tap-based interactions (for mobile)
