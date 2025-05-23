@@ -12,6 +12,11 @@ const map = L.map('map', {
     keyboard: false // Disable keyboard navigation
 }).setView([20, 0], 2);
 
+style: {
+    weight: 2, // Thicker borders
+    color: '#000', // Black borders
+    fillOpacity: 0.1 // Lighter fill
+}
 // Placeholder data for royal families (replace with your actual data)
 const royalFamilies = {
     "United Kingdom": ["House of Windsor", "House of Stuart", "House of Tudor"],
