@@ -12,11 +12,6 @@ const map = L.map('map', {
     keyboard: false // Disable keyboard navigation
 }).setView([20, 0], 2);
 
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
 // Placeholder data for royal families (replace with your actual data)
 const royalFamilies = {
     "United Kingdom": ["House of Windsor", "House of Stuart", "House of Tudor"],
