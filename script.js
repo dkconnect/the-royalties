@@ -12,11 +12,6 @@ const map = L.map('map', {
     keyboard: false // Disable keyboard navigation
 }).setView([20, 0], 2);
 
-style: {
-    weight: 2, // Thicker borders
-    color: '#000', // Black borders
-    fillOpacity: 0.1 // Lighter fill
-}
 // Placeholder data for royal families (replace with your actual data)
 const royalFamilies = {
     "United Kingdom": ["House of Windsor", "House of Stuart", "House of Tudor"],
@@ -26,28 +21,22 @@ const royalFamilies = {
     // Add more countries and families as needed
 };
 
-onEachFeature: (feature, layer) => {
-    layer.on('click', () => {
-        layer.setStyle({ fillColor: '#ff0000', fillOpacity: 0.5 }); // Highlight red
-        setTimeout(() => layer.setStyle({ fillColor: '#3388ff', fillOpacity: 0.2 }), 1000); // Reset after 1s
-        const countryName = feature.properties.name;
-        showFamilyList(countryName);
-    });
-}
-
 // Load GeoJSON data for country borders
 fetch('https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
             style: {
-                weight: 1,
-                color: '#3388ff',
-                fillOpacity: 0.2
+                weight: 2, // Thicker borders
+                color: '#000', // Black borders
+                fillOpacity: 0.1 // Lighter fill
             },
             onEachFeature: (feature, layer) => {
                 // Add click event to each country
                 layer.on('click', () => {
+                    // Highlight country on click
+                    layer.setStyle({ fillColor: '#ff0000', fillOpacity: 0.5 });
+                    setTimeout(() => layer.setStyle({ fillColor: '#000', fillOpacity: 0.1 }), 1000); // Reset after 1s
                     const countryName = feature.properties.name;
                     showFamilyList(countryName);
                 });
