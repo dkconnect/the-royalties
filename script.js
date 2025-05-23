@@ -4,10 +4,10 @@ const map = L.map('map', {
     zoom: 2, // Fixed initial zoom level
     dragging: true, // Enable dragging/panning
     zoomControl: true, // Enable zoom controls (+/- buttons)
-    scrollWheelZoom: false, // Disable zoom with mouse wheel (optional: set to true if desired)
+    scrollWheelZoom: false, // Disable zoom with mouse wheel (set to true for desktop if desired)
     doubleClickZoom: false, // Disable zoom on double-click
     boxZoom: false, // Disable zoom by dragging a box
-    tap: false, // Disable tap-based interactions (for mobile)
+    tap: true, // Enable tap-based interactions (for mobile)
     touchZoom: false, // Disable pinch-to-zoom (for mobile)
     keyboard: false, // Disable keyboard navigation
     minZoom: 2, // Prevent zooming out too far
