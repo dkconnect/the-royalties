@@ -1,15 +1,17 @@
-// Initialize the Leaflet map with locked settings and zoom controls
+// Initialize the Leaflet map with zoom controls and panning enabled
 const map = L.map('map', {
     center: [20, 0], // Center on the world
     zoom: 2, // Fixed initial zoom level
-    dragging: false, // Disable dragging/panning
+    dragging: true, // Enable dragging/panning
     zoomControl: true, // Enable zoom controls (+/- buttons)
-    scrollWheelZoom: false, // Optional: Set to true if you want mouse wheel zoom
+    scrollWheelZoom: false, // Disable zoom with mouse wheel (optional: set to true if desired)
     doubleClickZoom: false, // Disable zoom on double-click
     boxZoom: false, // Disable zoom by dragging a box
     tap: false, // Disable tap-based interactions (for mobile)
     touchZoom: false, // Disable pinch-to-zoom (for mobile)
-    keyboard: false // Disable keyboard navigation
+    keyboard: false, // Disable keyboard navigation
+    minZoom: 2, // Prevent zooming out too far
+    maxZoom: 5 // Prevent zooming in too close
 }).setView([20, 0], 2);
 
 // Placeholder data for royal families (replace with your actual data)
