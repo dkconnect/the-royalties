@@ -26,6 +26,15 @@ const royalFamilies = {
     // Add more countries and families as needed
 };
 
+onEachFeature: (feature, layer) => {
+    layer.on('click', () => {
+        layer.setStyle({ fillColor: '#ff0000', fillOpacity: 0.5 }); // Highlight red
+        setTimeout(() => layer.setStyle({ fillColor: '#3388ff', fillOpacity: 0.2 }), 1000); // Reset after 1s
+        const countryName = feature.properties.name;
+        showFamilyList(countryName);
+    });
+}
+
 // Load GeoJSON data for country borders
 fetch('https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson')
     .then(response => response.json())
