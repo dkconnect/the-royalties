@@ -6,6 +6,8 @@
     <title>ROYALTIES - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header class="header">
@@ -28,11 +30,23 @@
 
     <main>
         <section class="world-map-section">
-            <img src="img/world map.jpg" alt="World Map with Country Borders">
+            <!-- Leaflet map container -->
+            <div id="map" style="height: 600px;"></div>
+            <!-- Modal for family list -->
+            <div id="familyModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">×</span>
+                    <h2 id="countryName"></h2>
+                    <ul id="familyList"></ul>
+                </div>
+            </div>
             <img src="img/left.png" alt="Decorative Design" class="corner-design bottom-left">
             <img src="img/right.png" alt="Decorative Design" class="corner-design bottom-right">
         </section>
     </main>
 
-    </body>
+    <!-- Leaflet JS and custom script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
