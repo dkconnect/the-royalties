@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROYALTIES - Home</title>
+    <title>ROYALTIES - About Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header class="header">
@@ -16,8 +14,8 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html" class="active">home</a></li>
-                <li><a href="about.html">about us</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html" class="active">about us</a></li>
                 <li><a href="families.html">families</a></li>
                 <li><a href="contact.html">contact</a></li>
             </ul>
@@ -28,24 +26,26 @@
         </div>
     </header>
 
-    <main>
-        <section class="world-map-section">
-
-            <div id="map" style="height: 600px;"></div>
-
-            <div id="familyModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2 id="countryName"></h2>
-                    <ul id="familyList"></ul>
-                </div>
+    <main class="container">
+        <section class="section-title">
+            <h1>about us</h1>
+        </section>
+        <section class="about-content">
+            <div class="about-image">
+                <img src="img/queen.webp" alt="Royal Interior">
             </div>
-            <img src="img/left.png" alt="Decorative Design" class="corner-design bottom-left">
-            <img src="img/right.png" alt="Decorative Design" class="corner-design bottom-right">
+            <div class="about-text">
+                <p>hey</p>
+                <p>Hello all, thank you for landing at this corner of the internet!</p>
+                <p>ROYALTIES is a non-profit digital organization created to keep a record of all the royal families in the world, and we will continue updating it.</p>
+                <h3>FOR RESEARCHERS</h3>
+                <p>You can use this as a reference for any project. Consider this a digital library from our side. If you have any doubts, feel free to ask. We ensure this is authentic, more reliable than Wikipedia.</p>
+                <h3>FOR ROYAL FAMILIES OR INDIVIDUALS</h3>
+                <p>If you are part of a royal family, especially one without documented proof, and want to be included in this portal, <strong>please contact us at <span class="highlight">record.royalty@gmail.com</span></strong>.</p>
+                <p>Once you send your details, we will review them. If your royal lineage is not listed, contact us with proper documentation (which will remain confidential).</p>
+                <p>Lastly, enjoy your time here. Gain knowledge and contribute in any way you wish.</p>
+            </div>
         </section>
     </main>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
