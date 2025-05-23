@@ -92,11 +92,17 @@ body {
     margin-left: 5px;
 }
 
-/* Ensure the map takes full section height */
+/* Ensure map is fixed and takes full section */
 .world-map-section {
     position: relative;
     width: 100%;
     height: 600px; /* Adjust as needed */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure map is below modal but above background */
 }
 
 /* Modal styling */
@@ -143,7 +149,7 @@ body {
     padding: 5px 0;
 }
 
-/* Ensure corner designs don't overlap the map */
+/* Corner designs */
 .corner-design {
     position: absolute;
     z-index: 10;
