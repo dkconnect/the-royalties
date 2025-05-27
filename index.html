@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROYALTIES - Home</title>
+    <title>ROYALTIES - Family Map</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"><img src="img/2-removebg-preview.png" alt="ROYALTIES Logo"></a>
+            <a href="index.html"><img src="images/royalties-logo.png" alt="ROYALTIES Logo"></a>
         </div>
         <nav class="navbar">
             <ul>
@@ -31,7 +31,7 @@
     <main>
         <section class="world-map-section">
             <!-- Leaflet map container -->
-            <div id="map" style="height: 600px;"></div>
+            <div id="map" style="height: 100%;"></div>
             <!-- Modal for family list -->
             <div id="familyModal" class="modal">
                 <div class="modal-content">
@@ -43,8 +43,9 @@
         </section>
     </main>
 
-    <!-- Leaflet JS and custom script -->
+    <!-- Leaflet JS, PapaParse, and custom script -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
